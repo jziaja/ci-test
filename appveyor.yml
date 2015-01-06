@@ -59,7 +59,8 @@ build_script:
  
 test:
   assemblies:
-    - '**\bin\*\Release\TestProject.UnitTests.dll'
+    - '**\bin\net40\Release\TestProject.UnitTests.dll'
+    - '**\bin\net45\Release\TestProject.UnitTests.dll'
  
 #  categories:
 #    - UI
