@@ -64,8 +64,8 @@ test:
     - TestProject.NET45.UnitTests.dll
     - TestProject.NET451.UnitTests.dll
  
-#  categories:
-#    - UI
+  categories:
+    - Unit
 #    - E2E
  
 # to run tests from different categories as separate jobs in parallel
