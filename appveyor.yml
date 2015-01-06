@@ -49,6 +49,7 @@ after_build:
 build_script:
   - cmd: msbuild Source\TestProject.NET40.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
   - cmd: msbuild Source\TestProject.NET45.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild Source\TestProject.NET451.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
  
 # to disable automatic builds
 #build: off
@@ -59,8 +60,9 @@ build_script:
  
 test:
   assemblies:
-    - '**\bin\net40\Release\TestProject.UnitTests.dll'
-    - '**\bin\net45\Release\TestProject.UnitTests.dll'
+    - TestProject.NET40.UnitTests.dll
+    - TestProject.NET45.UnitTests.dll
+    - TestProject.NET451.UnitTests.dll
  
 #  categories:
 #    - UI
