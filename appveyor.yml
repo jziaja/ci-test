@@ -47,6 +47,7 @@ after_build:
  
 # to run your custom scripts instead of automatic MSBuild
 build_script:
+  - "C:\Program Files (x86)\MSBuild\12.0\bin\msbuild.exe" "Source\TestProject\TestProject.sln" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
  
 # to disable automatic builds
 #build: off
