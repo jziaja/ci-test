@@ -59,7 +59,7 @@ build_script:
  
 test:
   assemblies:
-    - **\bin\*\Release\TestProject.UnitTests.dll
+    - '**\bin\*\Release\TestProject.UnitTests.dll'
  
 #  categories:
 #    - UI
