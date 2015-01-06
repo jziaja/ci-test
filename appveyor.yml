@@ -46,7 +46,7 @@ before_build:
 after_build:
  
 # to run your custom scripts instead of automatic MSBuild
-build_script: build.bat
+build_script: appveyor.build
  
 # to disable automatic builds
 #build: off
