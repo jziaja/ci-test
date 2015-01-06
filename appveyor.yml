@@ -46,7 +46,8 @@ before_build:
 after_build:
  
 # to run your custom scripts instead of automatic MSBuild
-#build_script:
+build_script:
+  - cmd: msbuild Source\TestProject.NET40.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
  
 # to disable automatic builds
 #build: off
