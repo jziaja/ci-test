@@ -44,12 +44,16 @@ before_build:
  
 # scripts to run after build
 after_build:
- 
+
+environment:
+  matrix:
+    - solution_name: Source\TestProject.NET40.sln
+    - solution_name: Source\TestProject.NET45.sln
+    - solution_name: Source\TestProject.NET451.sln
+
 # to run your custom scripts instead of automatic MSBuild
 build_script:
-  - cmd: msbuild Source\TestProject.NET40.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-  - cmd: msbuild Source\TestProject.NET45.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-  - cmd: msbuild Source\TestProject.NET451.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild %solution_name% /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
  
 # to disable automatic builds
 #build: off
@@ -59,10 +63,10 @@ build_script:
 #---------------------------------#
  
 test:
-  assemblies:
-    - TestProject.NET40.UnitTests.dll
-    - TestProject.NET45.UnitTests.dll
-    - TestProject.NET451.UnitTests.dll
+#  assemblies:
+#    - TestProject.NET40.UnitTests.dll
+#    - TestProject.NET45.UnitTests.dll
+#    - TestProject.NET451.UnitTests.dll
  
   categories:
     - Unit
